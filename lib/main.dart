@@ -5,6 +5,7 @@ import './start/Registration/login.dart';
 import './start/Registration/signup.dart';
 import './home/homepage.dart';
 import 'home/pages/startpage.dart';
+import 'home/pages/smokingdamages.dart';
 
 
 
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
             'signuppage': (context) { return SignupPage(); },
             'homepage':   (context) { return HomePage();    },
             'startpage':   (context) { return StartPage();    },
+            'smokingpage':   (context) { return ListViewPage();    },
+
           },
 
 

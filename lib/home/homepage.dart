@@ -33,9 +33,7 @@ return Scaffold(
                     textColor: Colors.white,
                     color: const Color(0xFF4A6572),
                     child: Text('Smoking Damages',style: TextStyle(fontSize: 20)),
-                    onPressed: () {
-                    //Navigator.push(ctx, SmokingDamages());
-                    },
+                    onPressed: () { Navigator.of(context).pushNamed('smokingpage');},
                   )),
 
               Container(
