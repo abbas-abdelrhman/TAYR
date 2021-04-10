@@ -6,7 +6,7 @@ import './start/Registration/signup.dart';
 import './home/homepage.dart';
 import 'home/pages/startpage.dart';
 import 'home/pages/smokingdamages.dart';
-
+import './home/pages/startpage/counter.dart';
 
 
 void main() => runApp(MyApp());
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             'homepage':   (context) { return HomePage();    },
             'startpage':   (context) { return StartPage();    },
             'smokingpage':   (context) { return ListViewPage();    },
+            'dayscounter':   (context) { return DaysCounter();    },
 
           },
 

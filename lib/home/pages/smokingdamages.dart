@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../components/drawer.dart';
+
 
 
 class ListViewPage extends StatefulWidget {
@@ -9,18 +11,19 @@ class ListViewPage extends StatefulWidget {
 class _ListViewPageState extends State<ListViewPage> {
   // Title List Here
   var titleList = [
-    "Success",
-    "Motivation",
-    "Hard Work",
-    "Decision",
-    "Confidence",
-    "Business",
-    "Team Work"
+    "Lung Damage",
+    "Heart Disease",
+    "Risk of type 2 diabetes",
+    "Weakened immune system",
+    "Vision problems",
+    "Poor oral hygiene",
+    "Poor oral hygiene",
+    "Risk of other cancers"
   ];
 
   // Description List Here
   var descList = [
-    "Push yourself, because no one else is going to do it for you.",
+    "Smoking cigarettes affects lung health because a person breathes in not only nicotine but also a variety of additional chemicals. Smoking cigarettes affects lung health because a person breathes in not only nicotine but also a variety of additional chemicals.",
     "Your limitation—it's only your imagination.",
     "Hard Work changes the life.",
     "Sometimes it's the smallest decisions that can change your life forever.",
@@ -46,14 +49,11 @@ class _ListViewPageState extends State<ListViewPage> {
     double width = MediaQuery.of(context).size.width * 0.6;
     return Scaffold(
       appBar: AppBar(
-        // App Bar
-        title: Text(
-          "ListView On-Click Event",
-          style: TextStyle(color: Colors.grey),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.white,
-      ),
+                title: Text('Home Page'),
+                centerTitle: true,
+                backgroundColor: const Color(0xFF232F34),
+              ),
+      drawer: MyDrawer(),
       // Main List View With Builder
       body: ListView.builder(
         itemCount: imgList.length,
@@ -79,9 +79,10 @@ class _ListViewPageState extends State<ListViewPage> {
                       children: <Widget>[
                         Text(
                           titleList[index],
+                          overflow: TextOverflow.clip,
                           style: TextStyle(
                             fontSize: 25,
-                            color: Colors.grey,
+                            color: const Color(0xFFF9AA33),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -90,11 +91,14 @@ class _ListViewPageState extends State<ListViewPage> {
                         ),
                         Container(
                           width: width,
-                          child: Text(
+                          child: 
+                          Text(
                             descList[index],
+                            overflow: TextOverflow.clip,
+                            softWrap: false,
                             maxLines: 3,
                             style: TextStyle(
-                                fontSize: 15, color: Colors.grey[500]),
+                                fontSize: 15, color: Colors.black),
                           ),
                         ),
                       ],
@@ -126,8 +130,7 @@ showDialogFunc(context, img, title, desc) {
             padding: EdgeInsets.all(15),
             height: 320,
             width: MediaQuery.of(context).size.width * 0.7,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: ListView(
               children: <Widget>[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(5),
@@ -142,9 +145,10 @@ showDialogFunc(context, img, title, desc) {
                 ),
                 Text(
                   title,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25,
-                    color: Colors.grey,
+                    color:  const Color(0xFFF9AA33),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -158,7 +162,7 @@ showDialogFunc(context, img, title, desc) {
                     child: Text(
                       desc,
                       maxLines: 3,
-                      style: TextStyle(fontSize: 15, color: Colors.grey[500]),
+                      style: TextStyle(fontSize: 15, color: Colors.black),
                       textAlign: TextAlign.center,
                     ),
                   ),

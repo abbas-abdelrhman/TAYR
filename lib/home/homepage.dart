@@ -44,9 +44,7 @@ return Scaffold(
                     textColor: Colors.white,
                     color: const Color(0xFF4A6572),
                     child: Text('Plan',style: TextStyle(fontSize: 20)),
-                    onPressed: () {
-                //     Navigator.push(ctx, PlanPage());
-                    },
+                    onPressed: () { Navigator.of(context).pushNamed('dayscounter');},                    
                   )),
 
 

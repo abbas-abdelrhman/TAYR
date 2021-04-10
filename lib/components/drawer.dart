@@ -39,7 +39,7 @@ class MyDrawer extends StatelessWidget {
               ),
               Divider(color:const Color(0xFF232F34), height: 100,),
               ListTile(
-                title: Text("Contact Us"),
+                title: Text("About Us"),
                 leading: Icon(Icons.contact_mail),
                 onTap: (){},
               ),
