@@ -35,19 +35,9 @@ return Scaffold(
                     child: Text('Smoking Damages',style: TextStyle(fontSize: 20)),
                     onPressed: () { Navigator.of(context).pushNamed('smokingpage');},
                   )),
+              
 
-              Container(
-                  height: 50,
-                  margin: EdgeInsets.all(20),
-                  // ignore: deprecated_member_use
-                  child: RaisedButton(
-                    textColor: Colors.white,
-                    color: const Color(0xFF4A6572),
-                    child: Text('Plan',style: TextStyle(fontSize: 20)),
-                    onPressed: () { Navigator.of(context).pushNamed('dayscounter');},                    
-                  )),
-
-
+              
               Container(
                   height: 50,
                   margin: EdgeInsets.all(20),
@@ -57,7 +47,9 @@ return Scaffold(
                     color: const Color(0xFFF9AA33),
                     child: Text('Start',style: TextStyle(fontSize: 20)),
                     onPressed: () { Navigator.of(context).pushNamed('startpage');},
-                  )),
+                  )
+                  
+                  ),
 
                   ])
                   

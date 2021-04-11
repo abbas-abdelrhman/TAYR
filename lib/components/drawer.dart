@@ -25,17 +25,18 @@ class MyDrawer extends StatelessWidget {
               ListTile(
                 title: Text("Home"),
                 leading: Icon(Icons.home),
-                onTap: (){Navigator.of(context).pushNamed('signuppage');},
+                onTap: (){Navigator.of(context).pushNamed('challenge');},
               ),
               ListTile(
                 title: Text("Profile"), 
                 leading: Icon(Icons.pages),                     
-                onTap: (){Navigator.of(context).pushNamed('loginpage');},
+                onTap: (){//Navigator.of(context).pushNamed('loginpage');
+                },
               ),
               ListTile(
                 title: Text("Community"), 
                 leading: Icon(Icons.pages),                     
-                onTap: (){},
+                onTap: (){Navigator.of(context).pushNamed('community');},
               ),
               Divider(color:const Color(0xFF232F34), height: 100,),
               ListTile(

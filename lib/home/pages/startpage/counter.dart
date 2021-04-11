@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import '../../../components/drawer.dart';
 
 
 
@@ -13,20 +14,22 @@ class DaysCounter extends StatefulWidget {
 class _DaysCounterState extends State<DaysCounter> {
 
   CountDownController _controller = CountDownController();
-  bool _isPause = false;
+  bool _isStart = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Timer'),
-        centerTitle: true,
-      ),
+                title: Text('Days Counter'),
+                centerTitle: true,
+                backgroundColor: const Color(0xFF232F34),
+              ),
+              drawer: MyDrawer(),
       body: Center(
         child: CircularCountDownTimer(
             width: MediaQuery.of(context).size.width / 2,
             height: MediaQuery.of(context).size.height / 2,
-            duration: 14,
+            duration: 5,
             fillColor: Colors.amber,
             color: Colors.white,
           controller: _controller,
@@ -34,16 +37,17 @@ class _DaysCounterState extends State<DaysCounter> {
           strokeWidth: 10.0,
           strokeCap: StrokeCap.round,
           isTimerTextShown: true,
-          isReverse: false,
+          autoStart: false,
+          isReverse: true,
           onComplete: (){
               Alert(
                   context: context,
-                  title: 'Done',
+                  title: 'You are Hero!',
                 style: AlertStyle(
                   isCloseButton: true,
                   isButtonVisible: false,
                   titleStyle: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 30.0,
                   ),
                 ),
@@ -56,17 +60,17 @@ class _DaysCounterState extends State<DaysCounter> {
       floatingActionButton: FloatingActionButton.extended(
           onPressed: (){
             setState(() {
-              if(_isPause){
-                _isPause = false;
-                _controller.resume();
+              if(_isStart){
+                _isStart = false;
+                _controller.start();
               }else{
-                _isPause = true;
-                _controller.pause();
+                _isStart = true;
+                _controller.restart();
               }
             });
           },
-          icon: Icon(_isPause ? Icons.play_arrow : Icons.pause),
-          label: Text(_isPause ? 'Resume' : 'Pause'),
+          icon: Icon(_isStart ? Icons.cancel : Icons.play_arrow),
+          label: Text(_isStart ? 'Restart' : 'Start'),
       ),
     );
   }

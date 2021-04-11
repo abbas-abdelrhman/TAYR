@@ -14,7 +14,7 @@ class _ListViewPageState extends State<ListViewPage> {
     "Lung Damage",
     "Heart Disease",
     "Risk of type 2 diabetes",
-    "Weakened immune system",
+    "Weakened immune ",
     "Vision problems",
     "Poor oral hygiene",
     "Poor oral hygiene",
@@ -24,23 +24,24 @@ class _ListViewPageState extends State<ListViewPage> {
   // Description List Here
   var descList = [
     "Smoking cigarettes affects lung health because a person breathes in not only nicotine but also a variety of additional chemicals. Smoking cigarettes affects lung health because a person breathes in not only nicotine but also a variety of additional chemicals.",
-    "Your limitation—it's only your imagination.",
-    "Hard Work changes the life.",
-    "Sometimes it's the smallest decisions that can change your life forever.",
-    "Confidence is the most beautiful thing you can possess",
+    "Smoking cigarettes can damage the heart, blood vessels, and blood cells..",
+    "Smoking can also make it more difficult for people with diabetes to manage their condition.",
+    "Smoking cigarettes can weaken a person’s immune system, making them more susceptible to illness.",
+    "Smoking cigarettes can cause eye problems, including a greater risk of cataracts and age-related macular degeneration.",
     "A big business starts small.",
     "Talent wins games, but teamwork and intelligence win championships."
   ];
 
   // Image Name List Here
   var imgList = [
-    "images/img1.jpg",
-    "images/img2.jpg",
-    "images/img3.jpg",
-    "images/img4.jpg",
+    "images/l.jpg",
+    "images/heart.jfif",
+    "images/vision.jpg",
+    "images/badimage.jfif",
     "images/img5.jpg",
     "images/img6.jpg",
-    "images/img7.jpg"
+    "images/img7.jpg",
+    
   ];
 
   @override
@@ -49,7 +50,7 @@ class _ListViewPageState extends State<ListViewPage> {
     double width = MediaQuery.of(context).size.width * 0.6;
     return Scaffold(
       appBar: AppBar(
-                title: Text('Home Page'),
+                title: Text('Smoking Damages'),
                 centerTitle: true,
                 backgroundColor: const Color(0xFF232F34),
               ),

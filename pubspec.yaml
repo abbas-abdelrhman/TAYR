@@ -32,6 +32,8 @@ dependencies:
   rflutter_alert: ^1.0.8
 
 
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -56,6 +58,20 @@ flutter:
      - images/img5.jpg
      - images/img6.jpg
      - images/img7.jpg
+     - images/health1.jfif
+     - images/health2.jfif
+     - images/health3.jfif
+     - images/health4.jfif
+     - images/health5.jfif
+     - images/l.jpg
+     - images/heart.jfif
+     - images/vision.jpg
+     - images/badimage.jfif
+
+
+
+
+
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
